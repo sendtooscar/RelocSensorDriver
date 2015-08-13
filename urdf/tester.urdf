@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot name="myfirst">
+  <link name="/odom">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.15 0 0.35"/>
+      <geometry>
+	<!-- cylinder length="0.6" radius="0.2"/-->
+        <!-- mesh filename="file:///home/oscar/ros_workspace/RelocSensorDriver/mesh/p3at.stl"/ -->
+	< mesh filename="file:///home/oscar/ros_workspace/RelocSensorDriver/mesh/head_pan.stl"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

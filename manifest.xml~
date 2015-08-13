@@ -1,0 +1,22 @@
+<package>
+  <description brief="RelocSensorDriver">
+
+     RelocSensorDriver
+
+  </description>
+  <author>oscar</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/RelocSensorDriver</url>
+  <depend package="tf"/>
+  <depend package="geometry_msgs"/>
+  <depend package="visualization_msgs"/>
+  <depend package="sensor_msgs"/>
+  <!-- depend package="wiimote"/-->
+  <depend package="ardrone_autonomy"/>
+  <build_depend>message_generation</build_depend>
+  <run_depend>message_runtime</run_depend>
+
+</package>
+
+

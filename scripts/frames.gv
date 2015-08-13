@@ -1,0 +1,15 @@
+digraph G {
+"/US4" -> "/US1"[label="Broadcaster: /RelocNode\nAverage rate: 20.188 Hz\nMost recent transform: 0.122 sec old \nBuffer length: 4.755 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1371222416.630"[ shape=plaintext ] ;
+ }->"/US2";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1371222416.630"[ shape=plaintext ] ;
+ }->"/US3";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1371222416.630"[ shape=plaintext ] ;
+ }->"/US4";
+}

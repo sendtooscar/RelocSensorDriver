@@ -1,0 +1,201 @@
+Axes.Enabled=1
+Axes.Length=1
+Axes.Radius=0.1
+Axes.Reference\ Frame=<Fixed Frame>
+Axes2.Enabled=1
+Axes2.Length=1
+Axes2.Radius=0.1
+Axes2.Reference\ Frame=/drone1/base_reloc2
+Axes3.Enabled=0
+Axes3.Length=1
+Axes3.Radius=0.1
+Axes3.Reference\ Frame=/pioneer1/base_link
+Axes4.Enabled=1
+Axes4.Length=1
+Axes4.Radius=0.1
+Axes4.Reference\ Frame=/drone1/base_link
+Background\ ColorB=0
+Background\ ColorG=0
+Background\ ColorR=0
+Camera\ Config=1.1498 1.23907 24.8882 -1.0685 4.80289 5.00333
+Camera\ Type=rviz::OrbitViewController
+Camera.Enabled=0
+Camera.Image\ Rendering=background & overlay
+Camera.Image\ Topic=/ardrone/front/image_raw
+Camera.Overlay\ Alpha=0.5
+Camera.Queue\ Size=2
+Camera.Transport\ Hint=raw
+Camera.Zoom\ Factor=1
+Fixed\ Frame=/drone1/odom
+Grid.Alpha=0.5
+Grid.Cell\ Size=1
+Grid.ColorB=0.5
+Grid.ColorG=0.5
+Grid.ColorR=0.5
+Grid.Enabled=1
+Grid.Line\ Style=0
+Grid.Line\ Width=0.03
+Grid.Normal\ Cell\ Count=0
+Grid.OffsetX=0
+Grid.OffsetY=0
+Grid.OffsetZ=0
+Grid.Plane=0
+Grid.Plane\ Cell\ Count=20
+Grid.Reference\ Frame=<Fixed Frame>
+LaserScan..AxisColorAutocompute\ Value\ Bounds=1
+LaserScan..AxisColorAxis=2
+LaserScan..AxisColorMax\ Value=10
+LaserScan..AxisColorMin\ Value=-10
+LaserScan..AxisColorUse\ Fixed\ Frame=1
+LaserScan..FlatColorColorB=1
+LaserScan..FlatColorColorG=1
+LaserScan..FlatColorColorR=1
+LaserScan..IntensityAutocompute\ Intensity\ Bounds=1
+LaserScan..IntensityChannel\ Name=intensity
+LaserScan..IntensityMax\ ColorB=1
+LaserScan..IntensityMax\ ColorG=1
+LaserScan..IntensityMax\ ColorR=1
+LaserScan..IntensityMax\ Intensity=1
+LaserScan..IntensityMin\ ColorB=0
+LaserScan..IntensityMin\ ColorG=0
+LaserScan..IntensityMin\ ColorR=0
+LaserScan..IntensityMin\ Intensity=1
+LaserScan..IntensityUse\ full\ RGB\ spectrum=0
+LaserScan.Alpha=1
+LaserScan.Billboard\ Size=0.1
+LaserScan.Color\ Transformer=Intensity
+LaserScan.Decay\ Time=0
+LaserScan.Enabled=1
+LaserScan.Position\ Transformer=XYZ
+LaserScan.Queue\ Size=10
+LaserScan.Selectable=1
+LaserScan.Style=0
+LaserScan.Topic=/pioneer1/scan
+Map.Alpha=0.7
+Map.Draw\ Behind=0
+Map.Enabled=0
+Map.Topic=/map
+Marker.=1
+Marker.Enabled=1
+Marker.Marker\ Topic=/drone1/relocNode/relocVizDataBear
+Marker.Queue\ Size=100
+Marker2.Enabled=1
+Marker2.Marker\ Topic=/relocNode/relocVizDataRange
+Marker2.Queue\ Size=100
+Odometry.Angle\ Tolerance=0.1
+Odometry.ColorB=0
+Odometry.ColorG=0.1
+Odometry.ColorR=1
+Odometry.Enabled=1
+Odometry.Keep=100
+Odometry.Length=1
+Odometry.Position\ Tolerance=0.1
+Odometry.Topic=/drone1/odom
+Property\ Grid\ Splitter=606,0
+Property\ Grid\ State=expanded=.Global Options,Axes2.Enabled;splitterratio=0.5
+QMainWindow=000000ff00000000fd0000000300000000000001aa000002b0fc0200000003fb0000001600440072006f006e006500540065006c0065006f0070000000001d000001980000019800fffffffb000000100044006900730070006c006100790073010000001d000002b0000000ee00fffffffb0000000c00430061006d00650072006100000002b0000000f40000001900ffffff00000001000001330000055bfc0200000004fb0000000e004400610074006100760069007a02000002c4000000c50000013300000179fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730000000227000001510000006700fffffffb0000000a0056006900650077007300000001be000001d5000000bb00fffffffb0000001200530065006c0065006300740069006f006e0000000299000002df0000006700ffffff00000003000005410000003efc0100000001fb0000000800540069006d0065010000000000000541000002bf00ffffff00000391000002b000000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+Range.Alpha=0.5
+Range.Buffer\ Length=1
+Range.ColorB=1
+Range.ColorG=1
+Range.ColorR=0.333333
+Range.Enabled=0
+Range.Topic=/relocNode/relocUS4
+Range2.Alpha=0.5
+Range2.Buffer\ Length=1
+Range2.ColorB=1
+Range2.ColorG=1
+Range2.ColorR=1
+Range2.Enabled=0
+Range2.Topic=/relocNode/relocUS3
+Range3.Alpha=0.5
+Range3.Buffer\ Length=1
+Range3.ColorB=1
+Range3.ColorG=1
+Range3.ColorR=1
+Range3.Enabled=0
+Range3.Topic=/relocNode/relocUS2
+Range4.Alpha=0.5
+Range4.Buffer\ Length=1
+Range4.ColorB=1
+Range4.ColorG=1
+Range4.ColorR=1
+Range4.Enabled=1
+Range4.Topic=/drone1/relocNode/relocUS1
+RobotModel.Alpha=1
+RobotModel.Collision\ Enabled=0
+RobotModel.Enabled=0
+RobotModel.Robot\ Description=robot_description
+RobotModel.TF\ Prefix=
+RobotModel.Update\ Interval=0.1
+RobotModel.Visual\ Enabled=1
+RobotModel2.Alpha=1
+RobotModel2.Collision\ Enabled=0
+RobotModel2.Enabled=0
+RobotModel2.Robot\ Description=robot_description
+RobotModel2.TF\ Prefix=pioneer2
+RobotModel2.Update\ Interval=0
+RobotModel2.Visual\ Enabled=1
+Target\ Frame=/US1
+Tool\ 2D\ Nav\ GoalTopic=/move_base_simple/goal
+Tool\ 2D\ Pose\ EstimateTopic=/pioneer2/initialpose
+[Display0]
+ClassName=rviz::GridDisplay
+Name=Grid
+[Display1]
+ClassName=rviz::LaserScanDisplay
+Name=LaserScan
+[Display10]
+ClassName=rviz::RangeDisplay
+Name=Range
+[Display11]
+ClassName=rviz::RangeDisplay
+Name=Range2
+[Display12]
+ClassName=rviz::RangeDisplay
+Name=Range3
+[Display13]
+ClassName=rviz::RangeDisplay
+Name=Range4
+[Display14]
+ClassName=rviz::RobotModelDisplay
+Name=RobotModel2
+[Display15]
+ClassName=rviz::AxesDisplay
+Name=Axes3
+[Display16]
+ClassName=rviz::OdometryDisplay
+Name=Odometry
+[Display2]
+ClassName=rviz::AxesDisplay
+Name=Axes2
+[Display3]
+ClassName=rviz::AxesDisplay
+Name=Axes
+[Display4]
+ClassName=rviz::AxesDisplay
+Name=Axes4
+[Display5]
+ClassName=rviz::MapDisplay
+Name=Map
+[Display6]
+ClassName=rviz::MarkerDisplay
+Name=Marker
+[Display7]
+ClassName=rviz::MarkerDisplay
+Name=Marker2
+[Display8]
+ClassName=rviz::RobotModelDisplay
+Name=RobotModel
+[Display9]
+ClassName=rviz::CameraDisplay
+Name=Camera
+[Panel0]
+ClassLookupName=viz_panel1/DroneTeleop
+Name=DroneTeleop
+Topic=
+[Window]
+Height=821
+Width=1361
+X=3584
+Y=-1581

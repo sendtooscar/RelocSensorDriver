@@ -1,0 +1,116 @@
+#!/usr/bin/env python
+import roslib; roslib.load_manifest('RelocSensorDriver')
+import rospy
+from geometry_msgs.msg import Point
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.lines as lines
+import matplotlib, time
+import threading
+from wiimote.msg import State
+
+MSG=[0,0,0,0,0,0,0,0]
+MSG2=None
+MSG3=[0,0,0,0,0,0,0,0]
+plt.ion()
+fig = plt.figure()
+ax = fig.add_subplot(211)
+points,=ax.plot(np.random.randn(4),np.random.randn(4),'o')
+points3,=ax.plot(np.random.randn(4),np.random.randn(4),'x')
+line1 = lines.Line2D([512,512], [-3,1024], mfc='red')
+line2 = lines.Line2D([-3,1024], [384,384], mfc='red')
+ax.add_line(line1)
+ax.add_line(line2)
+plt.axis([-3,1024,-300,1024])
+ax2 = fig.add_subplot(212)
+points2,=ax2.plot(np.random.randn(4),np.random.randn(4),'o')
+plt.axis([-3,1024,-3,1024])
+plt.draw()
+
+def callback1(msg):
+    global MSG
+    MSG[0] = msg.x
+    MSG[1] = msg.y
+    
+
+def callback2(msg):
+    global MSG
+    MSG[2] = msg.x
+    MSG[3] = msg.y
+
+def callback3(msg):
+    global MSG
+    MSG[4] = msg.x
+    MSG[5] = msg.y
+
+def callback4(msg):
+    global MSG
+    MSG[6] = msg.x
+    MSG[7] = msg.y	
+
+def callback5(msg):
+    global MSG2
+    MSG2 = msg
+    #print msg.ir_tracking
+
+def callback6(msg):
+    global MSG3
+    #print msg
+    MSG3[0] = msg.x
+    MSG3[1] = msg.y
+
+def callback7(msg):
+    global MSG3
+    #print msg
+    MSG3[2] = msg.x
+    MSG3[3] = msg.y
+
+def callback8(msg):
+    global MSG3
+    #print msg
+    MSG3[4] = msg.x
+    MSG3[5] = msg.y
+
+def callback9(msg):
+    global MSG3
+    #print msg
+    MSG3[6] = msg.x
+    MSG3[7] = msg.y
+ 
+def listener():
+    rospy.init_node('IRplotter', anonymous=True)
+    rospy.Subscriber('IRdebug/point1', Point, callback1,queue_size=1)
+    rospy.Subscriber('IRdebug/point2', Point, callback2,queue_size=1)
+    rospy.Subscriber('IRdebug/point3', Point, callback3,queue_size=1)
+    rospy.Subscriber('IRdebug/point4', Point, callback4,queue_size=1)
+    rospy.Subscriber('IRdebug/pointest1', Point, callback6,queue_size=1)
+    rospy.Subscriber('IRdebug/pointest2', Point, callback7,queue_size=1)
+    rospy.Subscriber('IRdebug/pointest3', Point, callback8,queue_size=1)
+    rospy.Subscriber('IRdebug/pointest4', Point, callback9,queue_size=1)
+    rospy.Subscriber("wiimote/state", State, callback5,queue_size=1)
+    global MSG
+    while not rospy.is_shutdown():
+	if MSG is not None:
+ 		#print MSG
+		X=[MSG[0],MSG[2],MSG[4],MSG[6]]
+		Y=[MSG[1],MSG[3],MSG[5],MSG[7]]
+		points.set_data(X,Y)
+		plt.draw()
+ 	if MSG2 is not None:
+ 		X2=[MSG2.ir_tracking[0].x,MSG2.ir_tracking[1].x,MSG2.ir_tracking[2].x,MSG2.ir_tracking[3].x]
+		Y2=[MSG2.ir_tracking[0].y,MSG2.ir_tracking[1].y,MSG2.ir_tracking[2].y,MSG2.ir_tracking[3].y]
+		points2.set_data(X2,Y2)
+		plt.draw()
+	if MSG3 is not None:
+		X3=[MSG3[0],MSG3[2],MSG3[4],MSG3[6]]
+		Y3=[MSG3[1],MSG3[3],MSG3[5],MSG3[7]]
+		points3.set_data(X3,Y3)
+		#print MSG3
+		plt.draw()
+    rospy.sleep(0.1)
+    
+
+if __name__ == '__main__':  
+	#matplotlib.interactive(True)
+	listener()
+	

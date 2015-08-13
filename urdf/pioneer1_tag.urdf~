@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<robot name="Tag3">
+
+<!-- Chassis -->
+        <link name="Tag1">
+		<visual name="base_visual">
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry name="tag_geom">
+				<box size="0 0 0"/>
+			</geometry>
+		</visual>
+	</link>
+        	
+ 
+        <link name="base_IRcamx">
+		<visual name="base_visual">
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry name="drone_geom">
+				<box size="0 0 0"/>
+			</geometry>
+		</visual>		
+	</link>
+
+        
+        <joint name="Tag1_joint" type="fixed">
+		<origin xyz="0 0.02 -0.31" rpy="0 1.5708 1.5708"/>
+		<parent link="Tag1"/>
+		<child link="base_IRcamx"/>
+	</joint>
+
+	
+	<!--The base reloc -->
+
+       <link name="base_reloc2">
+		<visual name="base_visual">
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry name="drone_geom">
+				<box size="0 0 0"/>
+			</geometry>
+		</visual>		
+	</link>
+
+        
+        <joint name="Tag1_reloc_joint" type="fixed">
+		<origin xyz="0 0.04 -0.22" rpy="0 1.5708 1.5708"/>
+		<parent link="Tag1"/>
+		<child link="base_reloc2"/>
+	</joint>
+
+	
+	<!--The base reloc ustx-->
+
+       <link name="base_ustx">
+		<visual name="base_visual">
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry name="drone_geom">
+				<box size="0 0 0"/>
+			</geometry>
+		</visual>		
+	</link>
+
+        
+        <joint name="Tag1_ustx_joint" type="fixed">
+		<origin xyz="0 0.085 -0.265" rpy="0 1.5708 1.5708"/>
+		<parent link="Tag1"/>
+		<child link="base_ustx"/>
+	</joint>
+
+
+        <!--For now fix the transformation between measureement and prediction frames of tag 3-->
+        <link name="/MyWebCam/Tag1">
+		<visual name="base_visual">
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry name="tag_geom">
+				<box size="0 0 0"/>
+			</geometry>
+		</visual>
+	</link>
+
+        <joint name="glob_Tag1_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<parent link="/MyWebCam/Tag1"/>
+	        <child link="Tag1"/>
+	</joint>
+        
+</robot>
